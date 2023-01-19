@@ -12,12 +12,11 @@ describe('E2E launches tests', () => {
     await connectToMongo(`${process.env.TEST_MONGO_URL}`);
   });
 
-  it('should be able to get a list of launches', async () => {
-    const response = await request(app)
+  it('should not be able to get a list of launches', async () => {
+    await request(app)
       .get('/v1/launches')
       .expect('Content-Type', 'application/json; charset=utf-8')
-      .expect(200);
-    expect(Array.isArray(response.body)).toBeTruthy();
+      .expect(401);
   });
 
   it('should be able to create a launch', async () => {
