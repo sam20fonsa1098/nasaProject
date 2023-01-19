@@ -9,7 +9,8 @@
     "nasa": "yarn server & yarn web",
     "build": "npm run build --prefix server && npm run build --prefix web",
     "start": "yarn build && npm run start --prefix server",
-    "deploy": "yarn build && npm run deploy --prefix server"
+    "deploy": "yarn build && npm run deploy --prefix server",
+    "install-dep": "npm install --prefix server && npm install --prefix web"
   },
   "dependencies": {
     "axios": "^1.2.2"
