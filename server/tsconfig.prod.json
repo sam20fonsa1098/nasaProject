@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig",
+    "exclude": [
+        "**/*.spec.ts",
+        "coverage",
+        "jest.config.js",
+        "data",
+        "public",
+        ".vscode",
+        "node_modules"
+    ]
+}

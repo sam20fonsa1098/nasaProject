@@ -1,0 +1,17 @@
+{
+  "name": "nasa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "web": "npm run start --prefix web",
+    "nasa": "yarn server & yarn web",
+    "build": "npm run build --prefix server && npm run build --prefix web",
+    "start": "yarn build && npm run start --prefix server",
+    "deploy": "yarn build && npm run deploy --prefix server"
+  },
+  "dependencies": {
+    "axios": "^1.2.2"
+  }
+}

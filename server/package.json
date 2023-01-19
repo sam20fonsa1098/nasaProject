@@ -1,0 +1,53 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/infra/http/express/server.ts",
+    "tsc": "tsc",
+    "build": "tsc -b ./tsconfig.prod.json && tsc-alias",
+    "start": "node ./dist/infra/http/express/server.js",
+    "pm2": "pm2",
+    "deploy": "pm2 start ./dist/infra/http/express/server.js -i max",
+    "reload": "pm2 reload server",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/cookie-session": "^2.0.44",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.3",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.11.9",
+    "@types/passport": "^1.0.11",
+    "@types/passport-google-oauth20": "^2.0.11",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.3.1",
+    "prettier": "^2.7.1",
+    "supertest": "^6.3.1",
+    "ts-jest": "^29.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.7.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.3.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "mongoose": "^6.7.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pm2": "^5.2.2"
+  }
+}
