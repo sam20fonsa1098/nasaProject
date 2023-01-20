@@ -9,7 +9,7 @@
     "build": "tsc -b ./tsconfig.prod.json && tsc-alias",
     "start": "node ./dist/infra/http/express/server.js",
     "pm2": "pm2",
-    "deploy": "pm2 start ./dist/infra/http/express/server.js -i max",
+    "deploy": "pm2-runtime start ./dist/infra/http/express/server.js -i max",
     "reload": "pm2 reload server",
     "test": "jest"
   },

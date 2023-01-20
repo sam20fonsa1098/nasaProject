@@ -1,0 +1,9 @@
+node_modules
+server/dist
+server/coverage
+server/data
+server/.env
+server/.vscode
+server/*.pem
+server/public
+server/yarn-error.log

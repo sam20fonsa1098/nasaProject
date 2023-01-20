@@ -11,6 +11,7 @@
     "start": "yarn build && npm run start --prefix server",
     "deploy": "yarn build && npm run deploy --prefix server",
     "install-dep": "npm install --prefix server && npm install --prefix web",
+    "install-dep-only-prod": "npm install --prefix server --only=production && npm install --prefix web --only=production",
     "test": "npm run test --prefix server"
   },
   "dependencies": {
